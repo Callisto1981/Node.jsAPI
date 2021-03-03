@@ -13,7 +13,9 @@ app
 const port = process.env.PORT || 3000;
 app.listen(port, ()=> console.log(`Listening on port ${port}...`));
 
-app.get();
+app.get('/api/courses', (req, res) => {
+    res.send([courses]);
+});
 
 app.get();
 
