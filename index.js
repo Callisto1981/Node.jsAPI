@@ -42,6 +42,18 @@ app.post('/api/courses', (req, res) => {
     res.send(course);
 });
 
-app.put();
+app.put('/api/courses/:id', (req, res) => {
+    //Check to see if there is a course.
+    const course = course.find(course => course.id === parseInt(req.params.id));
+    if (!course) return res.status(404).send('The course with the given ID was not found.');
+
+    //If course does not exist.
+    const {error} = validateCourse(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+
+    //Update Course and return it to the client
+    course.name = req.body.name;
+    res.send(course);
+});
 
 app.delete();
