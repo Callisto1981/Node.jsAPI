@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Callisto1981/Node.jsAPI/issues"
   },
-  "homepage": "https://github.com/Callisto1981/Node.jsAPI#readme"
+  "homepage": "https://github.com/Callisto1981/Node.jsAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.0"
+  }
 }
